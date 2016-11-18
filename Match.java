@@ -1,4 +1,4 @@
-package Sortable;
+
 /**
 * The Match class implements all methods  that can
 * be used to read data from file and match products
@@ -159,8 +159,8 @@ public class Match {
 
 				}
 			}
-
-			results.add(newItem);
+			if (newItem.listings.size()>0)
+				results.add(newItem);
 		}
 		
 		return results;
@@ -168,9 +168,9 @@ public class Match {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String productFile = "C:\\temp\\sortable\\challenge_data_20110429\\products.txt";
+		String productFile = "products.txt";
 		List<Product> products = readProduct(productFile);
-		String listingFile = "C:\\temp\\sortable\\challenge_data_20110429\\listings.txt";
+		String listingFile = "listings.txt";
 		List<Listing> listings = readListing(listingFile);
 		List<Result> results = match(products, listings);
 		try {

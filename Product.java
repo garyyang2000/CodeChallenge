@@ -1,4 +1,4 @@
-package Sortable;
+
 /**
  * The structure of product is:
  *

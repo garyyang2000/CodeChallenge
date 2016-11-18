@@ -1,4 +1,4 @@
-package Sortable;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,15 +33,15 @@ public class Result {
 	}
 	
 	public String toString() {
-	     StringBuilder sb = new StringBuilder("{product_name:");
-	     sb.append(this.getProduct_name()).append(", listings: ");
+	     StringBuilder sb = new StringBuilder("{\"product_name\":\"");
+	     sb.append(this.getProduct_name()).append("\", \"listings\": [");
 	     String commar = "";
 	     for (Listing listing : listings){
 	    	 sb.append(commar);
 	    	 commar=",";
-	    	 sb.append("[").append(listing.toString()).append("]");
+	    	 sb.append(listing.toString());
 	     }
-	     sb.append("}\n");
+	     sb.append("]}\n");
 	     
 	     return sb.toString();
 	}

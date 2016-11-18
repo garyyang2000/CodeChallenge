@@ -1,4 +1,4 @@
-package Sortable;
+
 /**
  *
  * The structure of listings is:
@@ -48,8 +48,8 @@ public class Listing {
 	
 	@Override
 	public String toString() {
-		return "\"title\":\"" + title + "\", \"manugacturer\":\"" + manugacturer + "\", \"currency\":\"" + currency + "\", \"price\":\""
-				+ price + "\"";
+		return "{\"title\":\"" + title.replace("\"","\\\"") + "\", \"manufacturer\":\"" + manugacturer + "\", \"currency\":\"" + currency + "\", \"price\":\""
+				+ price + "\"}";
 	}
 	
 	
