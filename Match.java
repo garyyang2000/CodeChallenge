@@ -182,6 +182,8 @@ public class Match {
 			writer.close();
 		} catch (Exception e) {
 			// do something
+			System.out.println("Failed to match due to :");
+			e.printStackTrace();
 		}
 	}
 
